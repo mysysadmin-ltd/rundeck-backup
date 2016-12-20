@@ -4,7 +4,7 @@ RUNDECK_USER=rundeck
 RUNDECK_CONFIG_DIR=/etc/rundeck
 RUNDECK_SERVICE=rundeckd
 TMPDIR=/tmp
-DEFAULT_BACKUP_FILE=rundeck-backup-`date +%Y%m%d`.tar.gz
+DEFAULT_BACKUP_FILE=rundeck-backup-`date +%F"-"%H"-"%M`.tar.gz
 
 
 function usage {
