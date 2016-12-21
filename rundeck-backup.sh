@@ -130,7 +130,7 @@ function restore {
     sleep 60
     /sbin/service ${RUNDECK_SERVICE} status > /dev/null
     [ $? -ne 0 ] && echo  "Rundeck could not start. Aborting..."
-    for project in projects/*;do rd-jobs load -f jobs/`basename ${project}`.xml > /dev/null
+    for project in projects/*;do rd-jobs load -f jobs/`basename ${project}`.xml -p `basename ${project}`> /dev/null
     [ $? -ne 0 ] && errors_jobs=1;done
   fi
 
